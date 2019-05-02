@@ -12,6 +12,7 @@ export const useGiphy = (q: string): [IImage[], () => void] => {
     async () => {
       const qs = {
         api_key: API_KEY,
+        limit: 30,
         q
       }
 
@@ -30,9 +31,9 @@ export const useGiphy = (q: string): [IImage[], () => void] => {
 
         const newData = results.data.map((image: any) => ({
           alt: image.title,
-          height: image.images.fixed_width.height,
-          src: image.images.fixed_width.url,
-          width: image.images.fixed_width.width
+          height: image.images.fixed_height.height,
+          src: image.images.fixed_height.url,
+          width: image.images.fixed_height.width
         }))
 
         setData(newData)

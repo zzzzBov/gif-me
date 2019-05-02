@@ -9,9 +9,9 @@ export interface IResultsProps {
 export const Results: React.FunctionComponent<IResultsProps> = ({
   results
 }) => (
-  <main className="Results">
+  <main className='Results'>
     {results.map((image) => (
-      <img {...image} />
+      <img className='Results_result' {...image} key={image.src} />
     ))}
   </main>
 )
