@@ -5,13 +5,13 @@
 
 html,
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
 }
 
 html {
   font-size: 62.5%;
-  height: 100%;
 }
 
 body {
@@ -20,6 +20,5 @@ body {
   font-family: $sans;
   font-size: 1.6rem;
   line-height: $u2;
-  min-height: 100%;
   overflow-y: scroll;
 }

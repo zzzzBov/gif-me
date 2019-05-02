@@ -1,5 +1,15 @@
 import React from 'react'
 
-export const GifMe: React.FunctionComponent = () => (
-  <div className="GifMe">Lorem ipsum</div>
-)
+import { Footer } from './Footer'
+import { Results } from './Results'
+import { Search } from './Search'
+
+export const GifMe: React.FunctionComponent = () => {
+  return (
+    <div className="GifMe">
+      <Search />
+      <Results />
+      <Footer />
+    </div>
+  )
+}
