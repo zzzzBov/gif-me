@@ -5,6 +5,8 @@ import { useCallback, useState } from 'react'
 import { IImage } from '../interfaces'
 import { API_KEY } from '../key'
 
+let initialized = false
+
 export const useGiphy = (q: string): [IImage[], () => void] => {
   const [data, setData] = useState([])
 
@@ -43,6 +45,11 @@ export const useGiphy = (q: string): [IImage[], () => void] => {
     },
     [q]
   )
+
+  if (!initialized) {
+    searchGiphy()
+    initialized = true
+  }
 
   return [
     data,
