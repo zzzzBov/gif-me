@@ -1,15 +1,17 @@
 import React from 'react'
 
+import { IImage } from '../interfaces'
+
 export interface IResultsProps {
-  results: string[]
+  results: IImage[]
 }
 
 export const Results: React.FunctionComponent<IResultsProps> = ({
   results
 }) => (
   <main className="Results">
-    {results.map(result => (
-      <img src={result} />
+    {results.map((image) => (
+      <img {...image} />
     ))}
   </main>
 )
