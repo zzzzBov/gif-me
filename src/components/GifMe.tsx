@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { useGiphy, useQueryString } from '../hooks'
 
@@ -10,6 +10,10 @@ export const GifMe: React.FunctionComponent = () => {
   const [value, setValue] = useQueryString('q')
 
   const [results, search] = useGiphy(value)
+
+  useEffect(() => {
+    document.title = `Gif Me ${value}`
+  }, [value])
 
   return (
     <div className="GifMe">
