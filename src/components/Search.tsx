@@ -28,7 +28,10 @@ export const Search: React.FunctionComponent<ISearchProps> = ({
         value={value} />
       <button
         className='Search_button'
-        type='submit'>Search</button>
+        type='submit'>
+        <i className='fa fa-search' aria-hidden='true'></i>
+        <span className='sr-only'>Search</span>
+      </button>
     </form>
   </header>
 )

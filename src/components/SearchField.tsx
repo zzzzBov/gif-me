@@ -16,6 +16,7 @@ export const SearchField: React.FunctionComponent<ISearchFieldProps> = ({
   <label className='SearchField'>
     <span className='SearchField_label'>{label}</span>
     <input
+      autoFocus={true}
       className='SearchField_input'
       name={name}
       onChange={(e) => onChange(e.currentTarget.value)}
