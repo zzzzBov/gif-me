@@ -16,7 +16,10 @@ export const Search: React.FunctionComponent<ISearchProps> = ({
   <header className='Search'>
     <form
       className='Search_form'
-      onSubmit={onSubmit}>
+      onSubmit={(e) => {
+        e.preventDefault()
+        onSubmit()
+      }}>
       <SearchField
         label='Gif Me'
         name='q'
