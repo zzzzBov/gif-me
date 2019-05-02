@@ -5,10 +5,15 @@ import { Results } from './Results'
 import { Search } from './Search'
 
 export const GifMe: React.FunctionComponent = () => {
+  const [value, setValue] = React.useState('')
+
   return (
     <div className="GifMe">
-      <Search />
-      <Results />
+      <Search
+        onChange={setValue}
+        onSubmit={() => {}}
+        value={value}/>
+      <Results/>
       <Footer />
     </div>
   )

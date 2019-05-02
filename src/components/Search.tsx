@@ -1,5 +1,30 @@
 import React from 'react'
 
-export const Search: React.FunctionComponent = () => (
-  <header className='Search'>Search</header>
+import { SearchField } from './SearchField'
+
+export interface ISearchProps {
+  onChange(value: string): void,
+  onSubmit(): void,
+  value: string
+}
+
+export const Search: React.FunctionComponent<ISearchProps> = ({
+  onChange,
+  onSubmit,
+  value
+}) => (
+  <header className='Search'>
+    <form
+      className='Search_form'
+      onSubmit={onSubmit}>
+      <SearchField
+        label='Gif Me'
+        name='q'
+        onChange={onChange}
+        value={value} />
+      <button
+        className='Search_button'
+        type='submit'>Search</button>
+    </form>
+  </header>
 )
