@@ -1,8 +1,11 @@
-.Search {
-  font-size: $u4 * 1em;
-  text-align: center;
+.SearchField {
 
-  &_button {
+  &_label {
+    display: block;
+    font-size: $u4 * 1em;
+  }
+
+  &_input {
     background-color: transparent;
     border-color: $black;
     border-style: solid;
