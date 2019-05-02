@@ -1,6 +1,13 @@
 .Search {
   font-size: $u4 * 1em;
+  padding: 0 3rem;
   text-align: center;
+
+  &_form {
+    align-items: flex-end;
+    display: inline-flex;
+    max-width: 100%;
+  }
 
   &_button {
     background-color: transparent;
