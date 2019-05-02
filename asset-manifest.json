@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/gif-me/static/css/main.e17e421c.chunk.css",
+    "main.css": "/gif-me/static/css/main.26d5441a.chunk.css",
     "main.js": "/gif-me/static/js/main.53bc6c89.chunk.js",
     "main.js.map": "/gif-me/static/js/main.53bc6c89.chunk.js.map",
     "runtime~main.js": "/gif-me/static/js/runtime~main.a93ec0de.js",
@@ -9,10 +9,10 @@
     "static/js/2.36593656.chunk.js": "/gif-me/static/js/2.36593656.chunk.js",
     "static/js/2.36593656.chunk.js.map": "/gif-me/static/js/2.36593656.chunk.js.map",
     "index.html": "/gif-me/index.html",
-    "precache-manifest.47833d3f45f7ab61691671b4683f2245.js": "/gif-me/precache-manifest.47833d3f45f7ab61691671b4683f2245.js",
+    "precache-manifest.bc739e287570910c08298814c8b33227.js": "/gif-me/precache-manifest.bc739e287570910c08298814c8b33227.js",
     "service-worker.js": "/gif-me/service-worker.js",
     "static/css/2.c6f0a91d.chunk.css.map": "/gif-me/static/css/2.c6f0a91d.chunk.css.map",
-    "static/css/main.e17e421c.chunk.css.map": "/gif-me/static/css/main.e17e421c.chunk.css.map",
+    "static/css/main.26d5441a.chunk.css.map": "/gif-me/static/css/main.26d5441a.chunk.css.map",
     "static/media/index.scss": "/gif-me/static/media/fontawesome-webfont.fee66e71.woff"
   }
 }
