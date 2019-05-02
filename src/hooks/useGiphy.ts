@@ -21,15 +21,13 @@ export const useGiphy = (q: string): [IImage[], () => void] => {
       const search = querystring.stringify(qs)
 
       try {
-        const response = await fetch(`http://api.giphy.com/v1/gifs/search?${search}`)
+        const response = await fetch(`https://api.giphy.com/v1/gifs/search?${search}`)
 
         if (!response.ok) {
           throw new Error('bad response')
         }
 
         const results = await response.json()
-
-        console.log(results)
 
         const newData = results.data.map((image: any) => ({
           alt: image.title,
