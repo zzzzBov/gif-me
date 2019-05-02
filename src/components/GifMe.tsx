@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { useQueryString } from '../useQueryString'
+import { useGiphy, useQueryString } from '../hooks'
 
 import { Footer } from './Footer'
 import { Results } from './Results'
@@ -9,13 +9,16 @@ import { Search } from './Search'
 export const GifMe: React.FunctionComponent = () => {
   const [value, setValue] = useQueryString('q')
 
+  const [results, search] = useGiphy(value)
+
   return (
     <div className="GifMe">
       <Search
         onChange={setValue}
-        onSubmit={() => {}}
+        onSubmit={search}
         value={value}/>
-      <Results/>
+      <Results
+        results={results} />
       <Footer />
     </div>
   )
