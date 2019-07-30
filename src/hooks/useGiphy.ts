@@ -51,7 +51,7 @@ export const useGiphy = (q: string): [IResultProps[], () => void] => {
             height,
             id,
             onClick () {
-              console.log('clicked', originalUrl)
+              navigator.clipboard.writeText(originalUrl)
             },
             src,
             width
