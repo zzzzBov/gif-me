@@ -2,13 +2,14 @@ import querystring from 'querystring'
 
 import { useCallback, useState } from 'react'
 
-import { IImage } from '../interfaces'
+import { IResultProps } from '../components'
+import { IGIF, ISearchResponse } from '../interfaces'
 import { API_KEY } from '../key'
 
 let initialized = false
 
-export const useGiphy = (q: string): [IImage[], () => void] => {
-  const [data, setData] = useState([])
+export const useGiphy = (q: string): [IResultProps[], () => void] => {
+  const [data, setData] = useState<IResultProps[]>([])
 
   const searchGiphy = useCallback(
     async () => {
@@ -27,14 +28,35 @@ export const useGiphy = (q: string): [IImage[], () => void] => {
           throw new Error('bad response')
         }
 
-        const results = await response.json()
+        const results = await response.json() as ISearchResponse
 
-        const newData = results.data.map((image: any) => ({
-          alt: image.title,
-          height: image.images.fixed_height.height,
-          src: image.images.fixed_height.url,
-          width: image.images.fixed_height.width
-        }))
+        const newData = results.data.map((gif: IGIF) => {
+          const {
+            id,
+            images: {
+              fixed_height: {
+                height,
+                url: src,
+                width
+              },
+              original: {
+                url: originalUrl
+              }
+            },
+            title: alt
+          } = gif
+
+          return {
+            alt,
+            height,
+            id,
+            onClick () {
+              console.log('clicked', originalUrl)
+            },
+            src,
+            width
+          }
+        })
 
         setData(newData)
       } catch (e) {

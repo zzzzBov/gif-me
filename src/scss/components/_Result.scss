@@ -1,0 +1,14 @@
+.Result {
+  background-color: transparent;
+  border: none;
+  height: auto;
+  margin: 1.5rem;
+  max-width: calc(100% - 3rem);
+  padding: 0;
+
+  &_image {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+}
